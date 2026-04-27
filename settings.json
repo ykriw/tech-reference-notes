@@ -1,77 +1,108 @@
 {
   /*
    * 2026-04-26
-   * テーマカラーの調整
+   * オリジナルテーマの調整
    */
   "workbench.colorCustomizations": {
-    "editor.background": "#f6f7f0", // エディタ部プレビュー部両方反映
-    "editor.foreground": "#4d2323", // デフォルトでOK
-    "editor.lineHighlightBackground": "#f0f0e3", // カーソル行背景色
-    "editor.selectionBackground": "#dee493" // 選択範囲
+    // エディタ本体
+    "editor.background": "#f2f2ec",
+    "editor.foreground": "#575757",
+    "editor.lineHighlightBackground": "#e9eadc",
+    "editor.selectionBackground": "#dddcc8",
+
+    // 行番号・ガター
+    "editorGutter.background": "#f2f2ec",
+    "editorLineNumber.foreground": "#aaa58f",
+    "editorLineNumber.activeForeground": "#6f6a4f",
+
+    // タブ
+    "tab.activeBackground": "#f8f8f1",
+    "tab.activeForeground": "#3b4600",
+    "tab.inactiveBackground": "#e3e1d2",
+    "tab.inactiveForeground": "#77715f",
+    "tab.hoverBackground": "#eeecdc",
+    "tab.border": "#ccc5aa",
+    // "tab.activeBorder": "#b8860b",
+    // "tab.activeBorderTop": "#b8860b",
+
+    // タブバー全体
+    "editorGroupHeader.tabsBackground": "#d9d5c3",
+    "editorGroupHeader.tabsBorder": "#c7bea4"
   },
-  "markdown.styles": ["markdown-preview.css"], // CSSファイル指定
+
+  "markdown.styles": ["markdown-preview.css"],
+
   // エディタ部のカラー指定
   "editor.tokenColorCustomizations": {
-    "comments": "#22aa16",
+    "comments": "#6f8f3a",
+
     "textMateRules": [
       {
-        "scope": ["markup.heading.markdown"], // 見出し
-        "settings": {
-          "foreground": "#3b4600"
-        }
-      },
-      {
-        "scope": "meta.paragraph.markdown", // 段落
+        // 段落
+        "scope": "meta.paragraph.markdown",
         "settings": {
           "foreground": "#575757"
         }
       },
       {
-        "scope": "markup.bold", // 強調
+        // 強調
+        "scope": "markup.bold",
         "settings": {
-          "foreground": "#614f2e",
-          "fontStyle": ""
-        }
-      },
-      {
-        "scope": ["string"], // []の中の部分
-        "settings": {
-          "foreground": "#cf8e00",
-          "fontStyle": ""
-        }
-      },
-      {
-        "scope": ["entity.name.tag", "punctuation.definition.tag"], // 薄くしたいもの
-        "settings": {
-          "foreground": "#95ad29",
-          "fontStyle": ""
-        }
-      },
-      {
-        "scope": [
-          "punctuation.definition.quote.begin.markdown", // >マーク
-          "punctuation.definition.list.begin.markdown" // -マーク
-        ],
-        "settings": {
-          "foreground": "#a200ff",
+          "foreground": "#3b4600",
           "fontStyle": "bold"
         }
       },
       {
-        "scope": [
-          "markup.fenced_code.block.markdown", // コードブロック／その他
-          "markup.inline.raw",
-          "markup.underline" // リンクの()の方
-        ],
+        // [] の中の部分
+        "scope": ["string"],
         "settings": {
-          "foreground": "#cf8e00"
+          "foreground": "#b8860b",
+          "fontStyle": ""
         }
       },
       {
-        // セパレータ
+        // HTMLタグなど、薄くしたいもの
+        "scope": ["entity.name.tag", "punctuation.definition.tag"],
+        "settings": {
+          "foreground": "#8fa33a",
+          "fontStyle": ""
+        }
+      },
+      {
+        // 見出し
+        "scope": ["markup.heading.markdown"],
+        "settings": {
+          "foreground": "#3b4600",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        // リストや引用など
+        "scope": [
+          "punctuation.definition.quote.begin.markdown",
+          "punctuation.definition.list.begin.markdown"
+        ],
+        "settings": {
+          "foreground": "#8a6f24",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        // コードブロック／インラインコード／リンクURL
+        "scope": [
+          "markup.fenced_code.block.markdown",
+          "markup.inline.raw",
+          "markup.underline"
+        ],
+        "settings": {
+          "foreground": "#b8860b"
+        }
+      },
+      {
+        // セパレータ ---
         "scope": ["meta.separator.markdown"],
         "settings": {
-          "foreground": "#adcc00",
+          "foreground": "#8fa33a",
           "fontStyle": "bold"
         }
       }

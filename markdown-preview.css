@@ -6,6 +6,7 @@
 /* body全体 */
 .markdown-body {
   color: #575757;
+  background-color: #f2f2ec;
 }
 
 /* 見出し */
@@ -16,24 +17,59 @@
   color: #3b4600;
 }
 
-.markdown-body pre code {
-  color: #cf8e00;
-}
-
 /* 強調 ** ** */
 .markdown-body strong {
-  color: #614f2e;
-  font-weight: 400;
+  color: #3b4600;
+  font-weight: 600;
 }
 
 /* inline code ` ` */
-.markdown-body code,
+.markdown-body code {
+  color: #b8860b;
+  background-color: #f0f0ed;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+}
+
+/* リンク */
 .markdown-body a {
-  color: #cf8e00;
-  background-color: #f6f7f0;
+  color: #9a6f00;
+  background-color: transparent;
+  text-decoration-color: #c8b56d;
+  text-underline-offset: 3px;
 }
 
 /* code block ``` ``` */
 .markdown-body pre {
-  background-color: #f6f7f0;
+  background-color: #f2f2ec;
+  border: none;
+  border-radius: 6px;
+  padding: 0.9em 1em;
+}
+
+/* code block 内 */
+.markdown-body pre code {
+  color: #b8860b;
+  background-color: transparent;
+  padding: 0;
+}
+
+/* 引用 > */
+.markdown-body blockquote {
+  color: #6b6250;
+  background-color: #f2f2ec;
+  border-left: 4px solid #b8860b;
+  padding: 0.6em 1em;
+  margin: 1em 0;
+}
+
+/* 引用内の段落 */
+.markdown-body blockquote p {
+  margin: 0.4em 0;
+}
+
+/* 区切り線 --- */
+.markdown-body hr {
+  border: none;
+  border-top: 2px solid #d0c8aa;
 }
